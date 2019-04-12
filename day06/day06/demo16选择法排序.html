@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" value="  排序 " onclick ="testf()" />			
+	</body>
+</html>
+
+<script type="text/javascript">
+//选择法排序：从所有元素中先找到最小的，然后放到第一个位置。之后再看剩余元素中最小的，放到第二个位置……以此类推，就可以完成整个的排序工作了
+
+// 8,7,9,4,2,1
+
+/* i=0;
+
+  找最小数(从arr[0]到最后一个数)，然后交换（最小数和arr[0]）
+  
+
+  1,7,9,4,2,8
+
+  i=1	
+  找最小数(从arr[1]到最后一个数)，然后交换（最小数和arr[1]）
+  1,2,9,4,7,8
+
+  i=2	
+  找最小数(从arr[2]到最后一个数)，然后交换（最小数和arr[2]）
+  1,2,4,9,7,8
+
+  1,2,4,7,9,8
+
+  1,2,4,7,8,9
+*/
+
+function testf() {
+	var arr= [8,7,9,4,1,2];
+
+	//2、选择法的逻辑
+	for(var i=0;i<arr.length-1;i++){
+		//1、找最小数
+		//方法一：
+		// var min = arr[i];//1
+		// var minIndex = i;//minIndex记录最小数的下标
+		// for(var j=i+1;j<arr.length;j++){
+		// 	if(arr[j]<min){
+		// 		min = arr[j];
+		// 		minIndex = j;
+		// 	}
+		// }
+
+		//方法二：
+		var minIndex = i;//minIndex记录最小数的下标
+		for(var j=i+1;j<arr.length;j++){
+			if(arr[j]<arr[minIndex]){
+				minIndex = j;
+			}
+		}
+
+		//2、交换
+		var temp = arr[minIndex];
+		arr[minIndex] = arr[i];
+		arr[i] = temp;
+		
+	}
+
+	//3、输出数组所有的元素
+	for(var i=0;i<arr.length;i++){
+		console.log(arr[i]);
+	}
+
+}
+
+
+</script>

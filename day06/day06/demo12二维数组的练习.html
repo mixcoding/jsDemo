@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="button"  value=" 测试 " onclick="testf()" >
+	<div id="box" style="width:200px;height:100px;border:1px solid black">
+		
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+
+function testf() {
+	//通过循环为一个5X5的二维数组a赋值1到25，然后输出该数组的左下半三角。
+
+	var arr = [
+				[],
+				[],
+				[],
+				[],
+				[]
+			  ];
+
+	for(var i=0;i<arr.length;i++){
+		for(var j=0;j<5;j++){
+			arr[i].push(i*5+(j+1));
+		}
+	}
+
+
+	for(var i=0;i<arr.length;i++){
+		for(var j=0;j<arr[i].length;j++){
+			console.log(arr[i][j]);
+		}
+		console.log("-----------");
+	}
+	
+
+	//输出该数组的左下半三角
+	for(var i=0;i<arr.length;i++){
+		for(var j=0;j<=i;j++){
+			document.write(arr[i][j]+",");
+		}
+		document.write("<br/>");
+	}
+}
+
+</script>

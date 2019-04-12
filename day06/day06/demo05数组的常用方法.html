@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="button"  value=" 测试 " onclick="testf()" >
+	<div id="box" style="width:200px;height:100px;border:1px solid black">
+		
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+
+function testf() {
+	var arr=["芙蓉姐姐","犀利哥","干楼楼"];
+
+	//push():方法向数组的末尾添加一个或多个元素，并返回新的长度。
+	/*
+	var len1 = arr.push("凤姐");
+	console.log(len1);
+	var len2 = arr.push("石榴姐","张旭浩");
+	console.log(len2);
+	console.log(len1);
+	*/
+
+	// var t = arr.pop();
+	// console.log(t);
+
+	// var len1 = arr.unshift("凤姐");
+	// console.log(len1);
+
+	arr.shift();
+
+	var str="";
+	for(var i=0;i<arr.length;i++){
+		str+=arr[i]+",";
+	}
+	document.getElementById("box").innerHTML = str;	
+	
+	
+}
+
+</script>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="button"  value=" 测试 " onclick="testf()" >
+	<div id="box" style="width:200px;height:100px;border:1px solid black">
+		
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+
+function testf() {
+	var arr=[50,12,100,23,34];
+
+	for(var i=0;i<arr.length-1;i+=2){
+		console.log(arr[i]);
+	}
+
+	//当需要把数组的每个元素都进行遍历时，可以使用for in循环。
+	//for in :针对数组，可以使用for in。
+	for(var i in arr){//i是下标
+		// console.log(typeof i);
+		console.log(arr[i]);
+	}
+
+
+}
+
+</script>
