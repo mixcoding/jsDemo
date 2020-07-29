@@ -1,3 +1,3 @@
-# 周末总结
+# Css3 Transition 过渡
 
-## 人生中第一次用github，很开心
+#### 贝塞尔曲线的示例网址:`http://cubic-bezier.com/#.26,.84,.87,.11`。
